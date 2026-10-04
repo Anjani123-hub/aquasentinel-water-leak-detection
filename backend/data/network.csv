@@ -1,0 +1,17 @@
+asset_id,asset_type,name,from_node,to_node,zone
+RES-01,reservoir,North Reservoir,,,DMA-A
+PIPE-A12,pipeline,Reservoir trunk,RES-01,J-A,DMA-A
+PIPE-B12,pipeline,DMA-A transfer,J-A,J-B,DMA-B
+PIPE-C12,pipeline,DMA-B transfer,J-B,J-C,DMA-C
+J-A,junction,North trunk junction,,,DMA-A
+J-B,junction,DMA-B junction,,,DMA-B
+J-C,junction,DMA-C junction,,,DMA-C
+VALVE-B03,valve,DMA-B isolation valve,,,DMA-B
+TANK-01,storage_tank,North balancing tank,,,DMA-A
+PUMP-01,pump,North booster station,,,DMA-A
+FLOW-DMA-A,flow_meter,DMA-A inlet,,,DMA-A
+FLOW-DMA-B,flow_meter,DMA-B inlet,,,DMA-B
+FLOW-DMA-C,flow_meter,DMA-C inlet,,,DMA-C
+PRESSURE-DMA-A,pressure_sensor,DMA-A average pressure,,,DMA-A
+PRESSURE-DMA-B,pressure_sensor,DMA-B downstream pressure,,,DMA-B
+PRESSURE-DMA-C,pressure_sensor,DMA-C average pressure,,,DMA-C

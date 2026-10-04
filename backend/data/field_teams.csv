@@ -1,0 +1,3 @@
+team_id,name,skills,area,equipment,available
+TEAM-01,North Acoustic Team,"acoustic|pressure testing",North District,"correlator|pressure logger",true
+TEAM-02,South Pipe Crew,"valve isolation|repair",South District,"clamps|locator",true

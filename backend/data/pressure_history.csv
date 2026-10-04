@@ -1,0 +1,7 @@
+timestamp,zone,pressure_bar,scenario
+2026-10-03T01:00:00Z,DMA-B,4.1,normal
+2026-10-03T02:00:00Z,DMA-B,3.2,simulated_pressure_drop
+2026-10-03T03:00:00Z,DMA-B,2.8,simulated_pressure_drop
+2026-10-03T04:00:00Z,DMA-B,2.7,simulated_pressure_drop
+2026-10-03T02:00:00Z,DMA-A,4.2,normal
+2026-10-03T02:00:00Z,DMA-C,4.0,normal

@@ -1,0 +1,8 @@
+timestamp,zone,flow_m3h,scenario
+2026-10-03T01:00:00Z,DMA-B,96,normal
+2026-10-03T02:00:00Z,DMA-B,142,simulated_leak
+2026-10-03T03:00:00Z,DMA-B,151,simulated_leak
+2026-10-03T04:00:00Z,DMA-B,148,simulated_leak
+2026-10-03T05:00:00Z,DMA-B,129,simulated_leak
+2026-10-03T02:00:00Z,DMA-A,420,normal
+2026-10-03T02:00:00Z,DMA-C,350,normal
