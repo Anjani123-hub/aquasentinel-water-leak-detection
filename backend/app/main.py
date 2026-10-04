@@ -7,13 +7,15 @@ from io import BytesIO, StringIO
 from datetime import datetime, timezone, timedelta
 import json
 import csv
+import os
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from .agents import run_pipeline
 from .store import connect, log_event, rows_as_dicts
 
 app = FastAPI(title="AquaSentinel Water Operations API", version="1.0.0", description="Decision-support prototype; does not control production infrastructure.")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"], allow_methods=["*"], allow_headers=["*"])
+cors_origins = [origin.strip() for origin in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if origin.strip()]
+app.add_middleware(CORSMiddleware, allow_origins=cors_origins, allow_methods=["*"], allow_headers=["*"])
 
 DEMO = {"inflow": {"DMA-A": 420, "DMA-B": 510, "DMA-C": 350}, "demand": {"DMA-A": 405, "DMA-B": 390, "DMA-C": 342}, "pressure": {"DMA-A": 4.2, "DMA-B": 2.8, "DMA-C": 4.0}, "readings": [
  {"sensor_id":"FLOW-DMA-A","zone":"DMA-A","type":"flow","timestamp":"2026-10-03T02:00:00Z","value":420,"unit":"m3/h"},
